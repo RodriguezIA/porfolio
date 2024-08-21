@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'May 2022',
+        title: 'Software Development Intern',
+        description: 'En mis practicas yo realice desarrollo y mantenimiento de una plataforma para la gestion de comercios electronicos puntos clabes como la sincronizacion de estock, precios, envios, etc.'
+    },
+    {
+        date: 'Sep 2023',
+        title: 'Frontend Developer',
+        description: 'Mis actividades se centraron en migrar un p[royecto elaborado en net actualizando a angular, mejorando la calidad del software y estableciendo un diseno que soporte escalabilidad, el proyecto se centro en una aplicacion web de administracion de contenido editorial'
+    },
+    {
+        date: 'Jan 2023',
+        title: 'Software Engineer',
+        description: 'Describe trabajo de vision'
+    }
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">   
+    {
+        EXPERIENCE.map(ex => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...ex} />
+            </li>
+        ))
+    }               
+</ol>
+
